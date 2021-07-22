@@ -66,6 +66,9 @@ spec:
   steps:
     - name: run-kubectl
       image: lachlanevenson/k8s-kubectl
+      env:
+        - name: "DOCKER_CONFIG"
+          value: "/tekton/home/.docker/"       
       command: ["kubectl"]
       args:
         - "run"
@@ -99,6 +102,9 @@ spec:
   steps:
     - name: build-and-push
       image: gcr.io/kaniko-project/executor:v0.16.0
+      env:
+        - name: "DOCKER_CONFIG"
+          value: "/tekton/home/.docker/"       
       command:
         - /kaniko/executor
       args:
