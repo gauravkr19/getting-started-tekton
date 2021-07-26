@@ -36,7 +36,7 @@ spec:
               type: image
               params:
                 - name: url
-                  value: gauravkr19/getting-started # docker-repo-location.com/repo:getting-started
+                  value: registry.hub.docker.com/gauravkr19/getting-started # docker-repo-location.com/repo:getting-started
           - name: event-to-sink
             resourceSpec:
               type: cloudEvent
