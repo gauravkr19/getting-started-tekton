@@ -28,9 +28,9 @@ spec:
               type: git
               params:
               - name: revision
-                value: $(tt.params.gitrevision)
+                value: master
               - name: url
-                value: $(tt.params.gitrepositoryurl)
+                value: https://github.com/gauravkr19/ulmaceae.git
           - name: image-source
             resourceSpec:
               type: image
